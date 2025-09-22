@@ -14,7 +14,6 @@ function agregarAmigo(){
 }
 
 function mostrarNombres(){
-    //console.log("mostrando desde la funcion", amigos)
     let lista = document.getElementById('listaAmigos')
     lista.innerHTML = "";
     amigos.forEach(nombreAmigo => {
@@ -24,3 +23,10 @@ function mostrarNombres(){
     });
 }
 
+function sortearAmigo(){
+    let numeroRandom = Math.random() * amigos.length;
+    let numeroIndice = Math.floor(numeroRandom);
+    let ganador = amigos[numeroIndice];
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = ganador;
+}
